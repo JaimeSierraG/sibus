@@ -40,7 +40,7 @@ public class controladorGnr_Empresas implements ActionListener  {
    
     public controladorGnr_Empresas(visGnr_empresas vistaEmpresa){
         this.vistaEmpresa = vistaEmpresa;
-       
+        
         txtEmpresa_id = vistaEmpresa.getTxtEmpresa_id();
         txtNombre_empresa = vistaEmpresa.getTxtNombre_Empresa();
         txtRt = vistaEmpresa.getTxtRt();

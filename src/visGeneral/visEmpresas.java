@@ -10,16 +10,14 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author jhsgattorno
+ * @author jhsga
  */
-public class visGnr_empresas extends javax.swing.JDialog {
+public class visEmpresas extends javax.swing.JPanel {
 
     /**
-     * Creates new form jdvGr_empresas
+     * Creates new form visEmpresas
      */
-    public visGnr_empresas(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
-        this.setUndecorated(true);
+    public visEmpresas() {
         initComponents();
     }
 
@@ -32,16 +30,10 @@ public class visGnr_empresas extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblNombre = new javax.swing.JLabel();
-        BtnGuardar = new javax.swing.JButton();
-        lblRt = new javax.swing.JLabel();
-        btnLimpiar = new javax.swing.JButton();
-        lblDireccion = new javax.swing.JLabel();
-        btnSalir = new javax.swing.JButton();
-        lblTelefono_1 = new javax.swing.JLabel();
-        lblTelefono_2 = new javax.swing.JLabel();
         lblFax = new javax.swing.JLabel();
+        txtEmail = new javax.swing.JTextField();
         lblEmail = new javax.swing.JLabel();
+        lblEmpsa_id = new javax.swing.JLabel();
         txtContacto = new javax.swing.JTextField();
         lblContacto = new javax.swing.JLabel();
         txtEmpresa_id = new javax.swing.JTextField();
@@ -49,32 +41,24 @@ public class visGnr_empresas extends javax.swing.JDialog {
         txtRt = new javax.swing.JTextField();
         txtDireccion = new javax.swing.JTextField();
         txtTelefono_1 = new javax.swing.JTextField();
+        lblNombre = new javax.swing.JLabel();
+        lblRt = new javax.swing.JLabel();
+        lblDireccion = new javax.swing.JLabel();
+        lblTelefono_1 = new javax.swing.JLabel();
         txtTelefono_2 = new javax.swing.JTextField();
+        lblTelefono_2 = new javax.swing.JLabel();
         txtFax = new javax.swing.JTextField();
-        txtEmail = new javax.swing.JTextField();
-        lblEmpsa_id = new javax.swing.JLabel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        lblNombre.setText("Nombre");
-
-        BtnGuardar.setText("Guardar");
-
-        lblRt.setText("Registro Tributario");
-
-        btnLimpiar.setText("Limpiar");
-
-        lblDireccion.setText("Dirección");
-
-        btnSalir.setText("Salir");
-
-        lblTelefono_1.setText("Teléfono");
-
-        lblTelefono_2.setText("Telefono");
+        BtnGuardar = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
 
         lblFax.setText("Fax");
 
+        txtEmail.setText("jTextField8");
+
         lblEmail.setText("Email");
+
+        lblEmpsa_id.setText("Empresa");
 
         txtContacto.setText("jTextField1");
 
@@ -90,57 +74,66 @@ public class visGnr_empresas extends javax.swing.JDialog {
 
         txtTelefono_1.setText("jTextField5");
 
+        lblNombre.setText("Nombre");
+
+        lblRt.setText("Registro Tributario");
+
+        lblDireccion.setText("Dirección");
+
+        lblTelefono_1.setText("Teléfono");
+
         txtTelefono_2.setText("jTextField6");
+
+        lblTelefono_2.setText("Telefono");
 
         txtFax.setText("jTextField7");
 
-        txtEmail.setText("jTextField8");
+        BtnGuardar.setText("Guardar");
 
-        lblEmpsa_id.setText("Empresa");
+        btnLimpiar.setText("Limpiar");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        btnSalir.setText("Salir");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblEmpsa_id)
+                    .addComponent(lblNombre)
+                    .addComponent(lblRt)
+                    .addComponent(lblDireccion)
+                    .addComponent(lblTelefono_1)
+                    .addComponent(lblTelefono_2)
+                    .addComponent(lblFax)
+                    .addComponent(lblEmail)
+                    .addComponent(lblContacto))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblEmpsa_id)
-                            .addComponent(lblNombre)
-                            .addComponent(lblRt)
-                            .addComponent(lblDireccion)
-                            .addComponent(lblTelefono_1)
-                            .addComponent(lblTelefono_2)
-                            .addComponent(lblFax)
-                            .addComponent(lblEmail)
-                            .addComponent(lblContacto))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtNombre_Empresa, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtRt, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtEmpresa_id, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtDireccion, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtFax, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtTelefono_2, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtTelefono_1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE))
-                            .addComponent(txtEmail)
-                            .addComponent(txtContacto, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(127, 127, 127)
                         .addComponent(BtnGuardar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnLimpiar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnSalir)))
-                .addContainerGap(32, Short.MAX_VALUE))
+                        .addComponent(btnSalir))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(txtNombre_Empresa, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtRt, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtEmpresa_id, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtDireccion)
+                        .addComponent(txtFax)
+                        .addComponent(txtTelefono_2)
+                        .addComponent(txtTelefono_1)
+                        .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtContacto, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtEmpresa_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblEmpsa_id))
@@ -176,61 +169,15 @@ public class visGnr_empresas extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtContacto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblContacto))
-                .addGap(73, 73, 73)
+                .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnGuardar)
                     .addComponent(btnLimpiar)
                     .addComponent(btnSalir))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(visGnr_empresas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(visGnr_empresas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(visGnr_empresas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(visGnr_empresas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                visGnr_empresas dialog = new visGnr_empresas(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnGuardar;
@@ -260,8 +207,8 @@ public class visGnr_empresas extends javax.swing.JDialog {
         return BtnGuardar;
     }
 
-    public void setBtnGuardar(JButton bntGuardar) {
-        this.BtnGuardar = bntGuardar;
+    public void setBtnGuardar(JButton BtnGuardar) {
+        this.BtnGuardar = BtnGuardar;
     }
 
     public JButton getBtnLimpiar() {
@@ -284,74 +231,37 @@ public class visGnr_empresas extends javax.swing.JDialog {
         return txtContacto;
     }
 
-    public void setTxtContacto(JTextField txtContacto) {
-        this.txtContacto = txtContacto;
-    }
-
     public JTextField getTxtDireccion() {
         return txtDireccion;
-    }
-
-    public void setTxtDireccion(JTextField txtDireccion) {
-        this.txtDireccion = txtDireccion;
     }
 
     public JTextField getTxtEmail() {
         return txtEmail;
     }
 
-    public void setTxtEmail(JTextField txtEmail) {
-        this.txtEmail = txtEmail;
-    }
-
     public JTextField getTxtEmpresa_id() {
         return txtEmpresa_id;
-    }
-
-    public void setTxtEmpresa_id(JTextField txtEmpresa_id) {
-        this.txtEmpresa_id = txtEmpresa_id;
     }
 
     public JTextField getTxtFax() {
         return txtFax;
     }
 
-    public void setTxtFax(JTextField txtFax) {
-        this.txtFax = txtFax;
-    }
-
     public JTextField getTxtNombre_Empresa() {
         return txtNombre_Empresa;
-    }
-
-    public void setTxtNombre_Empresa(JTextField txtNombre_Empresa) {
-        this.txtNombre_Empresa = txtNombre_Empresa;
     }
 
     public JTextField getTxtRt() {
         return txtRt;
     }
 
-    public void setTxtRt(JTextField txtRt) {
-        this.txtRt = txtRt;
-    }
-
     public JTextField getTxtTelefono_1() {
         return txtTelefono_1;
-    }
-
-    public void setTxtTelefono_1(JTextField txtTelefono_1) {
-        this.txtTelefono_1 = txtTelefono_1;
     }
 
     public JTextField getTxtTelefono_2() {
         return txtTelefono_2;
     }
 
-    public void setTxtTelefono_2(JTextField txtTelefono_2) {
-        this.txtTelefono_2 = txtTelefono_2;
-    }
-
-    
 
 }

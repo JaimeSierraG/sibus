@@ -5,7 +5,7 @@
  */
 package conGeneral;
 import visGeneral.visGnr_empresas;
-import conGeneral.controladorGnr_Empresas;
+import javax.swing.JRootPane;
 
 
 /**
