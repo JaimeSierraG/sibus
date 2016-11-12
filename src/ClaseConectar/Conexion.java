@@ -5,7 +5,7 @@
  */
 package ClaseConectar;
 
-import static ClaseConectar.Conectar.conexion;
+import ClaseConectar.Conexion;
 import java.sql.*;
 import javax.swing.JOptionPane;
 /**
@@ -38,17 +38,6 @@ public class Conexion {
             
     }
     
-    public void desconectar() {
-        try {
-            conexion.close();
-        
-        } 
-        catch (SQLException exepcionSql)
-        {
-                exepcionSql.printStackTrace();
-        } 
-    
-    }
         
     
 }
