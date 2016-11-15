@@ -177,4 +177,54 @@ public class gnr_EmpresasDAO {
         return empresa;
          
     }
+
+    public gnr_empresas buscarRegistro(gnr_empresas myEmpresa, String cEmpresa, String cRT)  throws SQLException {
+        this.empresa = myEmpresa;
+        String cWhere = "";       
+        Connection accesoDB = myConexion.getConexion();
+        cSQL = " SELECT * FROM gnr_Empresas ";
+        if(cEmpresa.trim().length() > 0){
+            cWhere = " WHERE Nombre_Empresa ILIKE '%" + cEmpresa.trim() + "%'";
+        }
+        if(cRT.trim().length() > 0){
+            if(cWhere.length() > 0 ){
+                cWhere = cWhere + "  AND RT ILIKE '%" + cRT.trim() + "%'" ;
+            }else {
+                cWhere = "WHERE RT ILIKE '%" + cRT.trim() + "%'" ;
+            }
+        }
+        cSQL = cSQL + cWhere
+                + " ORDER BY empresa_id "
+                + " LIMIT 1";
+
+        //JOptionPane.showMessageDialog(null,  "instruccion sql " + cSQL );
+        try {
+            Statement st = accesoDB.createStatement();
+            ResultSet rs = st.executeQuery(cSQL);
+            if(rs.next()){
+                empresa.setcEmpresa_Id(rs.getString(1));
+                empresa.setcNombre_Empresa(rs.getString(2));
+                empresa.setcRt(rs.getString(3).trim());
+                empresa.setcDireccion(rs.getString(4));
+                empresa.setcTelefono_1(rs.getString(5));
+                empresa.setcTelefono_2(rs.getString(6));
+                empresa.setcFax(rs.getString(7));
+                empresa.setcEmail(rs.getString(8));
+                empresa.setcContacto(rs.getString(9));
+                return empresa;
+            }
+         } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,  "Error en instruccion sql" + e.getMessage() + cSQL, "Error de conexion", JOptionPane.INFORMATION_MESSAGE );
+            ps.close();
+            accesoDB.close();
+         } finally {
+            if(ps != null || ps != null) {
+                ps.close();
+                accesoDB.close();
+            }            
+        }
+         
+        return empresa;
+         
+    }
 }

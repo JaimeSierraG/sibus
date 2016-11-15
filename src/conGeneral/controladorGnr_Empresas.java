@@ -71,7 +71,7 @@ public class controladorGnr_Empresas implements ActionListener  {
         vistaEmpresa.getBtnGuardar().addActionListener(this);
         vistaEmpresa.getBtnLimpiar().addActionListener(this);
         vistaEmpresa.getBtnSalir().addActionListener(this);
-        vistaEmpresa.getTxtEmpresa_id().addActionListener(this);
+        vistaEmpresa.getBtnBuscar().addActionListener(this);
     }
     
     @Override
@@ -81,10 +81,10 @@ public class controladorGnr_Empresas implements ActionListener  {
             guardar();
         }else if (ae.getSource() == vistaEmpresa.getBtnLimpiar()) {
             limpiar();
+        }else if (ae.getSource() == vistaEmpresa.getBtnBuscar()) {
+            buscar();
         }else if (ae.getSource() == vistaEmpresa.getBtnSalir()){
             vistaEmpresa.dispose();
-        }else if (ae.getSource() == vistaEmpresa.getTxtEmpresa_id()) {
-             
         }
         
                 
@@ -129,16 +129,31 @@ public class controladorGnr_Empresas implements ActionListener  {
         } catch (SQLException ex) {
             Logger.getLogger(controladorGnr_Empresas.class.getName()).log(Level.SEVERE, null, ex);
         }
+        cargarObjetos();
         
-        txtEmpresa_id.setText(empresa.getcEmpresa_Id());
-        txtNombre_empresa.setText(empresa.getcNombre_Empresa());
-        txtRt.setText(empresa.getcRt());
-        txtDireccion.setText(empresa.getcDireccion());
-        txtTelefono_1.setText(empresa.getcTelefono_1());
-        txtTelefono_2.setText(empresa.getcTelefono_2());
-        txtFax.setText(empresa.getcFax());
-        txtEmail.setText(empresa.getcEmail());
-        txtContacto.setText(empresa.getcContacto());
+    }
+
+    private void buscar(){
+        String cEmpresa = txtNombre_empresa.getText();
+        String cRT = txtRt.getText();
+        try {
+            modeloEmpresas.buscarRegistro(empresa, cEmpresa, cRT);
+        } catch (Exception ex) {
+            Logger.getLogger(controladorGnr_Empresas.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        cargarObjetos();
     }
     
+    private void cargarObjetos(){
+        txtEmpresa_id.setText(empresa.getcEmpresa_Id());
+        txtNombre_empresa.setText(empresa.getcNombre_Empresa().trim());
+        txtRt.setText(empresa.getcRt().trim());
+        txtDireccion.setText(empresa.getcDireccion().trim());
+        txtTelefono_1.setText(empresa.getcTelefono_1().trim());
+        txtTelefono_2.setText(empresa.getcTelefono_2().trim());
+        txtFax.setText(empresa.getcFax().trim());
+        txtEmail.setText(empresa.getcEmail().trim());
+        txtContacto.setText(empresa.getcContacto().trim());
+        
+    }
 }

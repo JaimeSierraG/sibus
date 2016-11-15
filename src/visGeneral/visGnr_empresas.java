@@ -19,7 +19,7 @@ public class visGnr_empresas extends javax.swing.JDialog {
      */
     public visGnr_empresas(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
-        this.setUndecorated(true);
+        //this.setUndecorated(true);
         initComponents();
     }
 
@@ -53,6 +53,7 @@ public class visGnr_empresas extends javax.swing.JDialog {
         txtFax = new javax.swing.JTextField();
         txtEmail = new javax.swing.JTextField();
         lblEmpsa_id = new javax.swing.JLabel();
+        btnBuscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -68,9 +69,9 @@ public class visGnr_empresas extends javax.swing.JDialog {
 
         btnSalir.setText("Salir");
 
-        lblTelefono_1.setText("Teléfono");
+        lblTelefono_1.setText("Teléfono 1");
 
-        lblTelefono_2.setText("Telefono");
+        lblTelefono_2.setText("Telefono 2");
 
         lblFax.setText("Fax");
 
@@ -83,8 +84,10 @@ public class visGnr_empresas extends javax.swing.JDialog {
         txtEmpresa_id.setText("jTextField1");
 
         txtNombre_Empresa.setText("jTextField2");
+        txtNombre_Empresa.setToolTipText("Campo de búsqueda");
 
         txtRt.setText("jTextField3");
+        txtRt.setToolTipText("Campo de búsqueda");
 
         txtDireccion.setText("jTextField4");
 
@@ -98,14 +101,24 @@ public class visGnr_empresas extends javax.swing.JDialog {
 
         lblEmpsa_id.setText("Empresa");
 
+        btnBuscar.setText("Buscar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(36, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(BtnGuardar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnLimpiar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnBuscar)
+                        .addGap(14, 14, 14)
+                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblEmpsa_id)
                             .addComponent(lblNombre)
@@ -121,26 +134,19 @@ public class visGnr_empresas extends javax.swing.JDialog {
                             .addComponent(txtNombre_Empresa, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtRt, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtEmpresa_id, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtDireccion, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE)
+                            .addComponent(txtDireccion)
+                            .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtContacto, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtFax, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtFax, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
                                 .addComponent(txtTelefono_2, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtTelefono_1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE))
-                            .addComponent(txtEmail)
-                            .addComponent(txtContacto, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(127, 127, 127)
-                        .addComponent(BtnGuardar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnLimpiar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnSalir)))
-                .addContainerGap(32, Short.MAX_VALUE))
+                                .addComponent(txtTelefono_1, javax.swing.GroupLayout.Alignment.LEADING)))))
+                .addGap(33, 33, 33))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtEmpresa_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblEmpsa_id))
@@ -176,12 +182,13 @@ public class visGnr_empresas extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtContacto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblContacto))
-                .addGap(73, 73, 73)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnGuardar)
                     .addComponent(btnLimpiar)
-                    .addComponent(btnSalir))
-                .addContainerGap(39, Short.MAX_VALUE))
+                    .addComponent(btnSalir)
+                    .addComponent(btnBuscar))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -234,6 +241,7 @@ public class visGnr_empresas extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnGuardar;
+    private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnSalir;
     private javax.swing.JLabel lblContacto;
@@ -350,6 +358,14 @@ public class visGnr_empresas extends javax.swing.JDialog {
 
     public void setTxtTelefono_2(JTextField txtTelefono_2) {
         this.txtTelefono_2 = txtTelefono_2;
+    }
+
+    public JButton getBtnBuscar() {
+        return btnBuscar;
+    }
+
+    public void setBtnBuscar(JButton btnBuscar) {
+        this.btnBuscar = btnBuscar;
     }
 
     
